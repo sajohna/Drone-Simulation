@@ -20,8 +20,8 @@ DELAY_ARUCO=5
 DELAY_KB=5
 
 # ── Preflight checks ─────────────────────────────────────────
-if ! command -v gnome-terminal >/dev/null 2>&1; then
-  echo "[ERROR] gnome-terminal not found."
+if ! command -v xterm >/dev/null 2>&1; then
+  echo "[ERROR] xterm not found. Install it with: sudo apt install xterm"
   exit 1
 fi
 if [ ! -d "$PX4_DIR" ]; then
@@ -140,7 +140,7 @@ sleep 2
 echo "Starting PX4 simulation stack..."
 echo ""
 
-# ── Display env for gnome-terminal children ──────────────────
+# ── Display env for xterm children ──────────────────────────
 DISP_ENV="export DISPLAY=$DISPLAY; export WAYLAND_DISPLAY=$WAYLAND_DISPLAY; export XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR"
 ENV="$DISP_ENV; export LIBGL_ALWAYS_SOFTWARE=1; export GZ_VERSION=harmonic; export GZ_SIM_RESOURCE_PATH=\$GZ_SIM_RESOURCE_PATH:$PX4_DIR/Tools/simulation/gz/models; source $ROS_SETUP 2>/dev/null || true"
 
@@ -367,7 +367,7 @@ gz service -s /world/default/create \
   --reqtype gz.msgs.EntityFactory \
   --reptype gz.msgs.Boolean \
   --timeout 1000 \
-  --req 'sdf_filename: "/home/sajo/PX4-Autopilot/Tools/simulation/gz/models/visual_servoing_target/model.sdf", name: "aruco_target", pose: {position: {x: 2.0, y: 0.0, z: 0.05}}'
+  --req "sdf_filename: \"$PX4_DIR/Tools/simulation/gz/models/visual_servoing_target/model.sdf\", name: \"aruco_target\", pose: {position: {x: 2.0, y: 0.0, z: 0.05}}"
 echo 'ArUco spawn command sent.'
 echo "Done. Press Enter to close."
 read
