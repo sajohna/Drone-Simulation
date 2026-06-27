@@ -16,15 +16,6 @@ IDLE → TAKEOFF → SEARCH → IBVS_APPROACH → IBVS_DESCEND → HOVER → LAN
 ```
 
 The project is supervised research under **Prof. Chao**, aimed at reproducing academic simulation results and validating the IBVS control law in a realistic physics-based environment.
-
----
-
-## Demo
-
-![Simulation screenshot](docs/screenshot.png)
-
-> Real-time view: Gazebo Harmonic simulation (left), ROS2 controller log showing APPROACH state convergence (center), and live 3D trajectory tracker plotting 3000+ odometry points (right).
-
 ---
 
 ## Stack
