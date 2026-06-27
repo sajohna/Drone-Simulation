@@ -1,8 +1,5 @@
 # Autonomous Drone Simulation — IBVS Control Framework
 
-> **Image-Based Visual Servoing (IBVS) for fully autonomous ArUco marker tracking and hovering**
-> Simulation validation of: *Gu & Shen, "Robust NMPC for Uncalibrated IBVS Control of AUVs", IEEE Control Systems Letters, Vol. 8, 2024* — adapted to quadrotor / NED frame.
-
 ---
 
 ## Overview
