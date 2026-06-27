@@ -212,4 +212,3 @@ The SDF model (`model.sdf`) can be customized for different marker sizes or text
 
 Based on: **Gu, S. & Shen, Y. (2024)**. *Robust NMPC for Uncalibrated Image-Based Visual Servoing Control of AUVs.* IEEE Control Systems Letters, Vol. 8. Adapted to quadrotor dynamics and NED coordinate frame.
 
-Research supervised by **Prof. Chao**.
